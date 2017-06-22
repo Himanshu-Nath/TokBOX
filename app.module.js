@@ -1,0 +1,1 @@
+angular.module('videoApp', ['ui.router'])

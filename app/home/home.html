@@ -1,0 +1,30 @@
+<div ng-controller="homeCtrl as hmCtrl">
+<div class="container-fluid" style="top-margin: 10px">
+    <div class="well well-lg">
+        <div class="button-center">
+            <input type="button" ng-click="hmCtrl.createSession()" value="Step 1. Create / Get Session ID" class="btn btn-default text-center"/>
+            <!--<a href="" ng-click="hmCtrl.createSession()" class="col-sm-12" style="text-align: center;">Step 1. Create / Get Session ID</a>-->
+        </div>
+   </div>
+
+    <div class="well well-lg">
+        <div class="button-center">
+            <input type="button" ng-disabled="hmCtrl.disableToken" ng-click="hmCtrl.createToken()" value="Step 2. Create Token" class="btn btn-default"/>
+            <!--<a ng-disabled="hmCtrl.disableToken" href="" ng-click="hmCtrl.createToken()" class="col-sm-12" style="text-align: center;">Step 2. Create Token</a>-->
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div ng-hide="hmCtrl.messageView" class="well well-sm">
+            <div class="button-center">
+                <strong>Connected To Session</strong>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="alert alert-success" ng-hide="hmCtrl.alertView">
+        <strong>Success!</strong> Now you are <a href="" class="alert-link"> connected to session.</a>
+    </div>
+    </div>
+</div>
