@@ -11,6 +11,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "opentok": "^2.5.0"
+    "https": "^1.0.0",
+    "opentok": "^2.5.0",
+    "tls": "0.0.1"
   }
 }
