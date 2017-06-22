@@ -5,6 +5,7 @@ angular.module('videoApp')
 	vm.alertView = true;
 	vm.messageView = true;
 	vm.disableToken = true;
+	vm.disableSession = false;
 
 	vm.createSession = function() {
 		HomeService.createSession().then(
@@ -14,6 +15,7 @@ angular.module('videoApp')
 				vm.alertView = false;
 				vm.disableToken = false;
 				vm.messageView = false;
+				vm.disableSession = true;
 				$timeout(function () { vm.alertView = true;}, 3000);  
 			}, function(error) {
 				
