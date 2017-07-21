@@ -2,6 +2,10 @@ angular.module('videoApp')
 .factory('HomeService', ['$http', '$q',
 	function($http, $q) {
 	var HomeService = {};
+
+	HomeService.isSessionCreated = function(){
+		return localStorage.getItem("sessionId");
+	}
 	HomeService.createSession = function() {
 		var deferred = $q.defer();
 		$http.get('/api/createSession').then(

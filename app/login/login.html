@@ -1,6 +1,21 @@
-<div ng-controller="loginCtrl">
+<div ng-controller="loginCtrl as lgCtrl">
+    <div class="container-fluid">
+        <div class="well well-sm">
+            <div class="button-center">
+                <input class="btn btn-default col-sm-3 text-center" type="button" ng-disabled="" ng-click="lgCtrl.dissconnectSession()" value="Disconnect video"/>
+                <input class="btn btn-default col-sm-3 text-center" type="button" ng-disabled="" ng-click="lgCtrl.dissconnectSubscription()" value="Disconnect Subscription"/>
+                <input class="btn btn-default col-sm-3 text-center" type="button" ng-disabled="" ng-click="lgCtrl.dissconnectPublish()" value="Disconnect Publish"/>
+                <input class="btn btn-default col-sm-3 text-center" type="button" ng-disabled="" ng-click="lgCtrl.startPublish()" value="Start Publish"/>
+            </div>
+            <a href="">Total Online Users:  <span class="badge">{{lgCtrl.connectionCount}}</span></a><br>
+        </div>
+    </div>
     <div id="videos">
         <div id="subscriber"></div>
         <div id="publisher"></div>
+        <div id="chat"></div>
+    </div>
+    <div class="alert alert-warning" ng-hide="lgCtrl.alertView">
+        <strong>Warning!</strong> Your Browser is not <a href="" class="alert-link"> Compitable to support this.</a>
     </div>
 </div>
